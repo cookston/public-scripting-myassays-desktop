@@ -5,7 +5,7 @@ using MyAssays.Data.Persistence;
 using MyAssays.Data.Roslyn;
 using MyAssays.Data.Xml;
 
-namespace MyAssays.Script.TestBed.Core
+namespace MyAssays.Script.TestBed.Core.Mocks
 {
     public class ReportOutMock : IReportScriptOut
     {

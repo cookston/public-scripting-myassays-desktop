@@ -1,10 +1,9 @@
 ﻿using System;
-using JetBrains.Annotations;
 using MyAssays.AssayPackageManager;
 using MyAssays.Data.Interfaces;
 using MyAssays.Data.Roslyn;
 
-namespace MyAssays.Script.TestBed.Core
+namespace MyAssays.Script.TestBed.Core.Mocks
 {
     public class ReportInMock : ReportIn
     {
