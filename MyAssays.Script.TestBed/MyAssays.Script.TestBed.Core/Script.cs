@@ -29,7 +29,7 @@ namespace MyAssays.Script.TestBed.Core
         //Script element Id located at MTA protocol. If exists, it will be replaced with current mock, otherwise new Script report element will be created
         public const string ScriptId = "Script1";
         //Export type for ReportOut project
-        public const ReportOutExportType ReportOutType = ReportOutExportType.Xlsx;
+        public const ReportOutExportType ReportOutType = ReportOutExportType.Xml;
 
         public Script([NotNull] ReportIn reportIn, [NotNull] IReportScriptOut reportOut)
         {

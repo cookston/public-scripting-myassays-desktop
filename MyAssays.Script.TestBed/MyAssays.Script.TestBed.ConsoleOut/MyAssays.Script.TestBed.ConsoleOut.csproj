@@ -61,7 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MyAssays.Data">
-      <Version>6.0.123.681</Version>
+      <Version>6.0.124.615</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

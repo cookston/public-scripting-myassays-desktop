@@ -32,7 +32,7 @@ namespace MyAssays.Script.TestBed.Core.Mocks
             }
         }
 
-        public void WriteTextElement(string s)
+        public void WriteTextElement(string s, int rowSpacingBefore = 0, int rowSpacingAfter = 0)
         {
             OutStrings.Add(s);
         }
