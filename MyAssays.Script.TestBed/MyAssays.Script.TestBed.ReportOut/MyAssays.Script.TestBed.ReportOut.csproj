@@ -49,6 +49,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\Script\Script.cs">
+      <Link>Script.cs</Link>
+    </Compile>
+    <Compile Include="..\Script\ScriptBase.cs">
+      <Link>ScriptBase.cs</Link>
+    </Compile>
+    <Compile Include="Config.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

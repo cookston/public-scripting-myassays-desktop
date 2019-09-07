@@ -48,12 +48,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\Script\Script.cs">
+      <Link>Script.cs</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Script\ScriptBase.cs">
+      <Link>ScriptBase.cs</Link>
+    </Compile>
     <Compile Include="Mocks\ReportInMock.cs" />
     <Compile Include="Mocks\ReportOutExportType.cs" />
     <Compile Include="Mocks\ReportScriptMock.cs" />
-    <Compile Include="Script.cs">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
     <Compile Include="TestBed.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Mocks\ReportOutMock.cs" />
@@ -85,11 +89,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Protocols\ELISA %2896 well%29.assay-protocol">
+    <Content Include="..\Script\Protocols\ELISA %2896 well%29.assay-protocol">
+      <Link>Protocols\ELISA %2896 well%29.assay-protocol</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="key.snk" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

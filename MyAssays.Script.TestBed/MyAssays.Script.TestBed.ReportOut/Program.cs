@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MyAssays.Data.Roslyn;
-using MyAssays.Script.TestBed.Core;
-using MyAssays.Script.TestBed.Core.Mocks;
 
 namespace MyAssays.Script.TestBed.ReportOut
 {
@@ -16,11 +10,11 @@ namespace MyAssays.Script.TestBed.ReportOut
 
         static void Main(string[] args)
         {
-            //Do not change any code in current method! Use ExecuteScript method instead
+            //Do not change any code in current method! Use ExecuteScript method in Script.cs instead
             try
             {
-                _testBed = new Core.TestBed(Core.Script.ProtocolFilePath, new Data.Roslyn.ReportOut());
-                _testBed.ExecuteReport(Core.Script.ReportOutType, Core.Script.ScriptId);
+                _testBed = new Core.TestBed(Config.ProtocolFilePath, new Data.Roslyn.ReportOut());
+                _testBed.ExecuteReport(Config.ReportOutType, Config.ScriptId);
 
                 if (!string.IsNullOrEmpty(Out.Error))
                 {

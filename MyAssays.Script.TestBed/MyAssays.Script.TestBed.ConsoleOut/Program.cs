@@ -12,10 +12,10 @@ namespace MyAssays.Script.TestBed.ConsoleOut
 
         static void Main(string[] args)
         {
-            //Do not change any code in current method! Use ExecuteScript method instead
+            //Do not change any code in current method! Use ExecuteScript method in Script.cs instead
             try
             {
-                _testBed = new Core.TestBed(Core.Script.ProtocolFilePath, new ReportOutMock());
+                _testBed = new Core.TestBed(Config.ProtocolFilePath, new ReportOutMock());
                 _testBed.ExecuteConsole();
 
                 if (!string.IsNullOrEmpty(Out.Error))
