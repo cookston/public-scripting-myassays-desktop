@@ -4,12 +4,12 @@ using MyAssays.Data.Roslyn;
 
 namespace MyAssays.Script.TestBed.Core
 {
-    public partial class Script
+    public class ScriptBase
     {
-        public ReportIn In { get; }
-        public IReportScriptOut Out { get; }
+        public ReportIn In { get; private set; }
+        public IReportScriptOut Out { get; private set; }
 
-        public Script([NotNull] ReportIn reportIn, [NotNull] IReportScriptOut reportOut)
+        internal void Init([NotNull] ReportIn reportIn, [NotNull] IReportScriptOut reportOut)
         {
             In = reportIn ?? throw new ArgumentNullException(nameof(reportIn));
             Out = reportOut ?? throw new ArgumentNullException(nameof(reportOut));

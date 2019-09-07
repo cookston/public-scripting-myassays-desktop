@@ -1,13 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.779
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAssays.Script.TestBed.Core", "MyAssays.Script.TestBed.Core\MyAssays.Script.TestBed.Core.csproj", "{4E10C3E3-2F59-4DEA-A7E3-8E5C8D33072E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAssays.Script.TestBed.ConsoleOut", "MyAssays.Script.TestBed.ConsoleOut\MyAssays.Script.TestBed.ConsoleOut.csproj", "{3EE5B0C2-381C-47D1-BD70-61C5AACC3C84}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAssays.Script.TestBed.ReportOut", "MyAssays.Script.TestBed.ReportOut\MyAssays.Script.TestBed.ReportOut.csproj", "{18DD5E67-0DBD-49D9-A665-8FCD967E9202}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Script", "Script", "{1BD1290F-41E7-4980-969B-C2353A13ACB9}"
+	ProjectSection(SolutionItems) = preProject
+		Script\Script.cs = Script\Script.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Protocols", "Protocols", "{04315B26-6DB5-4F4C-AC2C-E66861A7813B}"
+	ProjectSection(SolutionItems) = preProject
+		Script\Protocols\ELISA (96 well).assay-protocol = Script\Protocols\ELISA (96 well).assay-protocol
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +40,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{04315B26-6DB5-4F4C-AC2C-E66861A7813B} = {1BD1290F-41E7-4980-969B-C2353A13ACB9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A2035B9B-43B9-4C2A-B642-37A75258BFFD}

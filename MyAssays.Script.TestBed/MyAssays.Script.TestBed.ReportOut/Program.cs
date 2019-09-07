@@ -18,14 +18,14 @@ namespace MyAssays.Script.TestBed.ReportOut
 
                 if (!string.IsNullOrEmpty(Out.Error))
                 {
-                    Console.WriteLine("Script execution complete with errors.");
+                    Console.WriteLine("Script execution completed with errors.");
                     Console.WriteLine(Out.Error);
                     Console.ReadKey();
                 }
             }
             catch (Exception e)
             {
-                Console.WriteLine($"Failed execute script: {e.Message}");
+                Console.WriteLine($"Failed to execute script: {e.Message}");
                 Console.ReadKey();
             }
         }

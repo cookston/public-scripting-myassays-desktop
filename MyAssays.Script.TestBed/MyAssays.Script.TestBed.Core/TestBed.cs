@@ -31,9 +31,30 @@ namespace MyAssays.Script.TestBed.Core
         private static Core.Script _script;
         const string DefaultScriptId = "Script1";
 
+        static string CheckFileExistsInCurrentFolderOrScriptsFolder(string path)
+        {
+            if (!File.Exists(path))
+            {
+                var scriptFilePath = $@"..\..\..\Script\{path}";
+
+                if (File.Exists(scriptFilePath))
+                {
+                    path = scriptFilePath;
+                }
+                else
+                {
+                    throw new FileNotFoundException($"File not found at {path}");
+                }
+            }
+
+            return path;
+        }
+
         public TestBed(string protocolFilePath, [NotNull] IReportScriptOut reportScriptOut)
         {
             Out = reportScriptOut ?? throw new ArgumentNullException(nameof(reportScriptOut));
+
+            protocolFilePath = CheckFileExistsInCurrentFolderOrScriptsFolder(protocolFilePath);
 
             var protocol = (IAssayPackageProtocol)AssayPackageManager.AssayPackageManager.UnPack(protocolFilePath);
             if (string.IsNullOrEmpty(protocol.AssayRunDetailsFilePath) || !File.Exists(protocol.AssayRunDetailsFilePath))
@@ -54,7 +75,8 @@ namespace MyAssays.Script.TestBed.Core
                 analysisLoggerMock.Object);
 
             In = new ReportInMock(_data);
-            _script = new Script(In, Out);
+            _script = new Script();
+            ((ScriptBase) _script).Init(In,Out);
         }
 
         private void SetupScript(ReportScriptGeneratorParameters parameters)
@@ -90,7 +112,10 @@ namespace MyAssays.Script.TestBed.Core
 
         private MatrixTransformAnalysisReportScript InitializeScript(ReportOutExportType? outExportType, string reportScriptId)
         {
-            var scriptClassText = File.ReadAllText("Script.cs");
+            var scriptFilePath = CheckFileExistsInCurrentFolderOrScriptsFolder("Script.cs");
+
+            var scriptClassText = File.ReadAllText(scriptFilePath);
+
             var classCode = RoslynHelpers.GetMethodText(scriptClassText, nameof(Script.ExecuteScript));
 
             var script = outExportType.HasValue ? new MatrixTransformAnalysisReportScript() : new ReportScriptMock(SetupScript);

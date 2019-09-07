@@ -20,7 +20,7 @@ namespace MyAssays.Script.TestBed.ConsoleOut
 
                 if (!string.IsNullOrEmpty(Out.Error))
                 {
-                    Console.WriteLine("Script execution complete with errors.");
+                    Console.WriteLine("Script execution completed with errors.");
                     Console.WriteLine(Out.Error);
                 }
                 else
@@ -29,11 +29,11 @@ namespace MyAssays.Script.TestBed.ConsoleOut
                         Console.WriteLine(outData);
                     }
 
-                Console.WriteLine("Script execution complete. Press any key to exit.");
+                Console.WriteLine("Script execution completed. Press any key to exit.");
             }
             catch (Exception e)
             {
-                Console.WriteLine($"Failed execute script: {e.Message}");
+                Console.WriteLine($"Failed to execute script: {e.Message}");
             }
 
             Console.ReadKey();
