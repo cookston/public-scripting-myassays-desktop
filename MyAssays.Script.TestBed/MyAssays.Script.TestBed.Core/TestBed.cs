@@ -15,9 +15,9 @@ using MyAssays.Data.Roslyn;
 using MyAssays.Data.Xml;
 using MyAssays.MatrixTransform.Analysis;
 using MyAssays.MatrixTransform.Analysis.Generators;
-using MyAssays.MatrixTransform.Roslyn;
 using MyAssays.ReportXmlConversion;
 using MyAssays.Script.TestBed.Core.Mocks;
+using MyAssays.Scripting;
 using FilePathHelper = MyAssays.Common.FilePathHelper;
 
 namespace MyAssays.Script.TestBed.Core
